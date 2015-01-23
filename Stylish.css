@@ -1,0 +1,42 @@
+h1{
+    color: fuchsia;
+    font-size: 50;
+    font-family: fantasy
+}
+
+p{
+    color: orangered;
+    font-style: italic;
+    font-size: 30;
+    font-family: fantasy
+}
+
+ul{
+    font-style: oblique;
+    font-weight: bolder;
+    color: gold;
+}
+
+.chips{
+    color: #ffff00;
+}
+
+.veggie{
+    color: lawngreen;
+}
+
+.sweets{
+    color: pink;
+}
+
+#drunk{
+    color: red;
+}
+
+#gardies{
+    width: 100%;
+}
+
+#box{
+    position: relative;
+}
