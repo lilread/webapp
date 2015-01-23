@@ -11,26 +11,30 @@
     <div class="jumbotron" id="box">
         <h1>GARDIES</h1>
         <img src="img/gardies.jpg" id="gardies" class="img-rounded ">
+
         <p></p>
+
         <p>Heaven for Drunk People after Cindies</p>
     </div>
 
-    <div class = "row">
+    <div class="row">
         <div class="col-md-8" id="greeting">
-            <form id="greeting-form" class="form-inline">
-                <div class="form-group">
-                <label for="fullName">What's your full name?</label>
-                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Raoul">
-                </div>
-                <p>
+            <!--<form id="greeting-form" method="post" action="/booking" class="form-inline">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="fullName">What's your full name?</label>-->
+                    <!--<input type="text" id="fullName" name="fullName" class="form-control" placeholder="Raoul">-->
+                <!--</div>-->
+                <!--<p>-->
 
-                </p>
-                <div class="form-group">
-                    <label for="phonenumber">What's your number?</label>
-                    <input type="number" id="phonenumber" name="phonenumber" class="form-control" placeholder="123456789">
-                </div>
-                <button class="btn btn-default" type="submit">OK!</button>
-            </form>
+                <!--</p>-->
+
+                <!--<div class="form-group">-->
+                    <!--<label for="phonenumber">What's your number?</label>-->
+                    <!--<input type="number" id="phonenumber" name="phonenumber" class="form-control"-->
+                           <!--placeholder="123456789">-->
+                <!--</div>-->
+                <!--<button class="btn btn-default" type="submit">OK!</button>-->
+            <!--</form>-->
         </div>
     </div>
     <div class="page-header">
@@ -114,29 +118,37 @@
     </div>
 
     <div class="row">
+
         <h2>Make a booking inquiry</h2>
-        <form id="booking">
-        <div class="col-md-8">
+        <form id="booking-form" class="form-inline" method="post" action="/booking">
+        <div class="col-md-8" id="booking">
 
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name Here">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name Here" required>
+                    <if(isEmpty (name) {
+                    <response.send("Please type in your name you moron!!");
+                    }
+                    </response.send>
+                     </if>
+
                 </div>
         </div>
         <div class="col-md-8">
 
-                <div class="form-group">
-                    <label for="email">e-mail</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Kevin@email.com">
-                </div>
+            <div class="form-group">
+                <label for="email">e-mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Kevin@email.com" required>
+            </div>
         </div>
         <div class="col-md-8">
 
-                        <div class="form-group">
-                            <label for="guests">Number of Guests</label>
-                            <input type="number" id="guests" name="guests" class="form-control" placeholder="1">
-                        </div>
-                </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" class="form-control" placeholder="1" required>
+            </div>
+        </div>
+        <button class="btn btn-default" type="submit">OK!</button>
         </form>
     </div>
 

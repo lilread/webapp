@@ -15,3 +15,17 @@ jQuery("#greeting-form").on("submit", function (event_details) {alert("WINNER");
 //}
 
 });
+jQuery("#booking-form").on("submit", function (event_details);
+
+    var thename = jQuery("#name").val();
+    var email = jQuery("#email").val();
+    var guests = jQuery("#guests").val();
+    var message1 = "Hey there, ";
+    var message2 = "thank you for your booking for ";
+    var message3 = " guests, we will confirm your booking at";
+    var booking_message = message1 + thename + message2 + guests + message3 + email;
+    //alert(greeting_message);
+    jQuery("#booking-form").hide();
+    jQuery("#booking").append("<p>" + booking_message + "</p>");
+    event_details.preventDefault();
+//}
