@@ -17,9 +17,19 @@
 
     <div class = "row">
         <div class="col-md-8" id="greeting">
-            <form id="greeting-form">
+            <form id="greeting-form" class="form-inline">
+                <div class="form-group">
                 <label for="fullName">What's your full name?</label>
-                <input type="text"
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Raoul">
+                </div>
+                <p>
+
+                </p>
+                <div class="form-group">
+                    <label for="phonenumber">What's your number?</label>
+                    <input type="number" id="phonenumber" name="phonenumber" class="form-control" placeholder="123456789">
+                </div>
+                <button class="btn btn-default" type="submit">OK!</button>
             </form>
         </div>
     </div>
@@ -103,9 +113,37 @@
         </div>
     </div>
 
+    <div class="row">
+        <h2>Make a booking inquiry</h2>
+        <form id="booking">
+        <div class="col-md-8">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name Here">
+                </div>
+        </div>
+        <div class="col-md-8">
+
+                <div class="form-group">
+                    <label for="email">e-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Kevin@email.com">
+                </div>
+        </div>
+        <div class="col-md-8">
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" class="form-control" placeholder="1">
+                        </div>
+                </div>
+        </form>
+    </div>
+
 
 </div>
 
+<script src="jquery.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

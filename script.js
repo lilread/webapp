@@ -1,11 +1,17 @@
 //Flirty greeting
 
-bonjour();
+//bonjour();
 
-function bonjour(greeting) {
+jQuery("#greeting-form").on("submit", function (event_details) {alert("WINNER");
+
     var greeting = "Hello ";
-    var name = prompt("Oh hey there, what's your name? ;) xoxo")
+    var fullName = jQuery("#fullName").val()
     var winky = " ;) xx";
-    var greeting_message = greeting + name + winky;
-    alert(greeting_message);
-}
+    var greeting_message = greeting + fullName + winky;
+    //alert(greeting_message);
+    jQuery("#greeting-form").hide();
+    jQuery("#greeting").append("<p>" + greeting_message + "</p>");
+    event_details.preventDefault();
+//}
+
+});
